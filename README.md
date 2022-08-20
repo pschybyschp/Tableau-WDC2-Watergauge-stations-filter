@@ -1,13 +1,16 @@
 # Tableau-WDC-Watergauge-stations-filter
 The Tableau Webdataconnector Watergaugestations-filter is based on the Tableau Webdataconnector Watergaugestations. 
 It loads master data of the watergauge stations available in Germany. 
-It provides a form to filter the data which should be load.
+It provides a form to filter the data which should be loaded.
 
 Major improvments comparing to Tableau Webdataconnector Watergaugestations:
 - Provision of a form to filter watergaugestations by waters
 - After selection of a speccific water additionaly the form enables to filter watergaugestations by locations based on the distance to the water source and a radius
 - The WDC contains also some simple logic to improve the usability of the form 
 
+The form contains a dropdown list of all available waters.
+To populate this dropdown list following REST-API is used:
+https://www.pegelonline.wsv.de/webservices/rest-api/v2/waters.json
 
 Depending on the user selection following REST-API resources are used:
 User select 'All waters':  https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations.json
