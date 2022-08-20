@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Wasserpegel REST-API</title>
+    <meta http-equiv="Cache-Control" content="no-store" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://connectors.tableau.com/libs/tableauwdc-2.3.latest.js" type="text/javascript"></script>
+    <script src="watergaugestationsfilter.js" type="text/javascript"></script>
+	<script src="water.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<form>
+	<div class="container container-table">
+		<div class="row vertical-center-row">
+		<h5>Filter data by water and spatial analytics</h5>
+
+			<div class="col-md-12 well">
+				<label for="sel1" class="form-label">Select water:</label>
+				<select class="form-control " id="sel1">
+					<option selected value='666'>All water</option>
+				</select>
+			</div>
+			
+			<div class="col-md-12 well">
+				<label class="form-check-label" for="inlineRadio1">Search for watergauge stations within a geographic circle!</label>
+				</br>
+				<label class="form-check-label" for="inlineRadio1">Off</label>
+				<input class="form-check-input inlineRadioOptions" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked >
+				<input class="form-check-input inlineRadioOptions" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+				<label class="form-check-label" for="inlineRadio2">On</label>
+			
+
+			<div class="col-md-12 well" >
+			<div class="col-md-6">
+				<label for="customRange1" class="form-label">Set gravity point by distance from water source [km]</label>
+				<input type="range" class="form-range inputDisabled" value="50" min="0" max="3000" step="50" id="customRange1" oninput="this.nextElementSibling.value = this.value" disabled>
+				<output>50</output>
+			</div>
+			<div class="col-md-6">
+				<label for="customRange2" class="form-label">Radius around selected point [km]</label>
+				<input type="range" class="form-range inputDisabled" value="10" min="0" max="100" step="5" id="customRange2" oninput="this.nextElementSibling.value = this.value" disabled>
+				<output>10</output>
+			</div>
+			</div>
+</div>
+		</div>
+	</div>
+</form>
+				
+<script>
+
+</script>
+
+    <div class="container container-table">
+        <div class="row vertical-center-row">
+            <div class="text-center col-md-8 col-md-offset-2">
+                <button type="button" id="submitButton" class="btn btn-success" >Get watergauge data!</button>
+            </div>
+        </div>
+    </div>
+	
+</body>
+
+</html>
