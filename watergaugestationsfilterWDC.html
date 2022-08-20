@@ -22,17 +22,17 @@
 <form>
 	<div class="container container-table">
 		<div class="row vertical-center-row">
-		<h5>Filter data by water and spatial analytics</h5>
+		<!-- <h5>Filter data by water and spatial analytics</h5> -->
 
 			<div class="col-md-12 well">
 				<label for="sel1" class="form-label">Select water:</label>
 				<select class="form-control " id="sel1">
-					<option selected value='666'>All water</option>
+					<option selected value='666'>All waters</option>
 				</select>
 			</div>
 			
 			<div class="col-md-12 well">
-				<label class="form-check-label" for="inlineRadio1">Search for watergauge stations within a geographic circle!</label>
+				<label class="form-check-label" for="inlineRadio1">Enable search for watergauge stations on selected water</label>
 				</br>
 				<label class="form-check-label" for="inlineRadio1">Off</label>
 				<input class="form-check-input inlineRadioOptions" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked >
@@ -42,7 +42,7 @@
 
 			<div class="col-md-12 well" >
 			<div class="col-md-6">
-				<label for="customRange1" class="form-label">Set gravity point by distance from water source [km]</label>
+				<label for="customRange1" class="form-label">Set gravity point by distance [km] from source of the selected water </label>
 				<input type="range" class="form-range inputDisabled" value="50" min="0" max="3000" step="50" id="customRange1" oninput="this.nextElementSibling.value = this.value" disabled>
 				<output>50</output>
 			</div>
