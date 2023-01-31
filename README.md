@@ -1,4 +1,4 @@
-# Tableau-WDC-Watergauge-stations-filter
+# Tableau-WDC2-Watergauge-stations-filter
 The Tableau Webdataconnector Watergaugestations-filter is based on the Tableau Webdataconnector Watergaugestations. 
 It loads master data of the watergauge stations available in Germany. 
 It provides a form to filter the data which should be loaded.
